@@ -56,3 +56,10 @@
   background-color: $overlay;
   box-shadow: 0 0 12px 0 $dark;
 }
+
+.mat-snack-bar-container {
+  background: #1c202a;
+  &.error {
+    color: $error;
+  }
+}
