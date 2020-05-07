@@ -1,0 +1,40 @@
+<div class="entry-point-container">
+  <div class="logo"></div>
+  <div class="title form-title">Forgot Password?</div>
+  <div class="labels">
+    Please enter your email address to request a password reset.
+  </div>
+  <div class="form-container">
+    <form [formGroup]="confirmEmailForm">
+      <div class="form-group">
+        <mat-form-field [floatLabel]="'never'">
+          <input
+            matInput
+            type="email"
+            formControlName="email"
+            placeholder="Email"
+            name="email"
+          />
+          <mat-error *ngIf="confirmEmailFormControl.email.errors">
+            <mat-error *ngIf="confirmEmailFormControl.email.errors.required"
+              >Email is required</mat-error
+            >
+            <mat-error *ngIf="confirmEmailFormControl.email.errors.email"
+              >Email must be a valid email address</mat-error
+            >
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="buttons">
+        <button
+          mat-raised-button
+          class="primary-signin"
+          [disabled]="confirmEmailForm.invalid"
+          (click)="openConfirmationPopup()"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

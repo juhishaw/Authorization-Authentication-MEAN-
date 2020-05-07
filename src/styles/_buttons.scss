@@ -1,0 +1,25 @@
+@import "./variables";
+@import "./typography";
+
+.primary-signin {
+  min-height: 30px;
+  min-width: 70px;
+  border-radius: 2px;
+  background-color: $primary;
+  @extend .btn-txt;
+}
+
+.popup-btn {
+  height: 30px;
+  min-width: 49px;
+  border-radius: 2px;
+  background-color: $primary;
+  cursor: pointer;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  @extend .btn-txt;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}

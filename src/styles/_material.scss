@@ -1,0 +1,58 @@
+/*Use variables*/
+@import "./variables";
+@import "./typography";
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: $primary;
+}
+.mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  font-size: 12px;
+  top: 24px;
+}
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  top: 4px;
+}
+.mat-form-field {
+  width: 100%;
+}
+.mat-input-element {
+  @include font-mixin(12px, $white, 600, 17px);
+  @include letter-spacing(0);
+}
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  font-size: 12px;
+  top: 20px;
+}
+.mat-flat-button.mat-primary[disabled],
+.mat-flat-button.mat-accent[disabled],
+.mat-flat-button.mat-warn[disabled],
+.mat-flat-button[disabled][disabled],
+.mat-raised-button.mat-primary[disabled],
+.mat-raised-button.mat-accent[disabled],
+.mat-raised-button.mat-warn[disabled],
+.mat-raised-button[disabled][disabled],
+.mat-fab.mat-primary[disabled],
+.mat-fab.mat-accent[disabled],
+.mat-fab.mat-warn[disabled],
+.mat-fab[disabled][disabled],
+.mat-mini-fab.mat-primary[disabled],
+.mat-mini-fab.mat-accent[disabled],
+.mat-mini-fab.mat-warn[disabled],
+.mat-mini-fab[disabled][disabled] {
+  @include font-mixin(12px, $white, 600, 17px);
+  @include letter-spacing(0.4);
+  background-color: $primary;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  height: 2px;
+}
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: $dark-underline;
+}
+
+.mat-dialog-container {
+  border-radius: 2px !important;
+  background-color: $overlay;
+  box-shadow: 0 0 12px 0 $dark;
+}

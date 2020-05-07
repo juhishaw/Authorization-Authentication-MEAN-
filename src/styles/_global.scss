@@ -1,0 +1,41 @@
+@import "./variables";
+@import "./mixins";
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: $white;
+  -webkit-box-shadow: 0 0 0px 1000px $overlay inset;
+  transition: background-color 5000s ease-in-out 0s;
+  @include font-mixin(12px, $white, 600, 17px);
+  @include letter-spacing(0);
+}
+
+/*Component*/
+.entry-point-container {
+  @include padding(54px, 54px, 54px, 54px);
+  max-height: 480px;
+  height: fit-content;
+  width: 100%;
+  max-width: 396px;
+  border-radius: 2px;
+  background-color: $overlay;
+  box-shadow: 0 0 12px 0 #101319;
+  @include center(both);
+  .logo {
+    background: url("src/assets/images/Pareo\ Logo.png") no-repeat;
+    height: 74px;
+    width: 100%;
+    margin-bottom: 54px;
+    background-size: contain;
+    margin-left: -20px;
+  }
+}

@@ -1,0 +1,77 @@
+@import "./variables";
+
+@mixin font-size($sizeValue) {
+  font-size: $sizeValue + px;
+}
+@mixin letter-spacing($sizeValue) {
+  letter-spacing: $sizeValue + px;
+}
+
+@mixin font-mixin($size: false, $colour: false, $weight: false, $lh: false) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour !important;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+@mixin input-placeholder {
+  &.placeholder {
+    @include font-mixin(12px, $placeholder, 600, 17px);
+  }
+  &:-moz-placeholder {
+    @include font-mixin(12px, $placeholder, 600, 17px);
+  }
+  &::-moz-placeholder {
+    @include font-mixin(12px, $placeholder, 600, 17px);
+  }
+  &:-ms-input-placeholder {
+    @include font-mixin(12px, $placeholder, 600, 17px);
+  }
+  &::-webkit-input-placeholder {
+    @include font-mixin(12px, $placeholder, 600, 17px);
+  }
+}
+
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == "vertical" {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } @else if $position == "horizontal" {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  } @else if $position == "both" {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}

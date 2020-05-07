@@ -1,0 +1,18 @@
+@import "../styles/variables";
+@import "../styles/typography";
+
+.eye {
+  position: absolute;
+  right: 0px;
+  font-size: 10px;
+  top: 10px;
+  cursor: pointer;
+  &:hover {
+    color: $white;
+  }
+}
+.icon-eye-off {
+  top: 0;
+  font-size: 28px;
+  color: $white;
+}

@@ -1,0 +1,26 @@
+@import "./variables";
+@import "./mixins";
+
+.form-title {
+  @include font-mixin(14px, $white, 600, 19px);
+  @include letter-spacing(0);
+}
+
+.labels {
+  @include font-mixin(12px, $light, 600, 17px);
+  @include letter-spacing(0);
+}
+.hyperlink-txt {
+  @include font-mixin(12px, $hyperlink, 600, 17px);
+  @include letter-spacing(0);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.popup-title {
+  @include font-mixin(16px, $hyperlink, 600, 22px);
+  @include letter-spacing(0);
+}
+.btn-txt {
+  @include font-mixin(12px, $white, 600, 17px);
+  @include letter-spacing(0.4);
+}
