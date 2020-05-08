@@ -1,7 +1,10 @@
+@import "../../../styles.scss";
+
 .vc-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include d-flex {
+    justify-content: getJustify(c);
+    align-items: getAlign(c);
+  }
   flex-direction: column;
   height: 100vh;
   background: url("https://www.publicdomainpictures.net/pictures/80000/velka/red-brick-wall-clipart.jpg#.W5guDpUt1yw.link")

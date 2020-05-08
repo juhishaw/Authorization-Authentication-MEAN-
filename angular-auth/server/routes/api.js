@@ -31,6 +31,8 @@ router.post("/register", async (request, response) => {
   const schema = Joi.object({
     email: Joi.string().required().email(),
     password: Joi.string().required(),
+    username: Joi.string().required(),
+    privilege: Joi.string().required()
   });
 
   const { error } = schema.validate(request.body);
@@ -45,6 +47,8 @@ router.post("/register", async (request, response) => {
   const newUser = new User({
     email: request.body.email,
     password: hashedPassword,
+    username: request.body.username,
+    privilege: request.body.privilege
   });
 
   /* Build indexes to ensure unique constraint is enforced */
@@ -61,6 +65,8 @@ router.post("/register", async (request, response) => {
       data: {
         email: newUser.email,
         password: newUser.password,
+        username: newUser.username,
+        privilege: newUser.privilege,
         token: token
       },
       message: `${request.body.email} is succesfully registered`,

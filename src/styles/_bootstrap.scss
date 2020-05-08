@@ -1,0 +1,7 @@
+@import "./variables";
+@import "./typography";
+@import "./mixins";
+
+.dropdown-toggle::after {
+  display: none;
+}

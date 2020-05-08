@@ -1,8 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {
   MatSnackBarRef,
-  MAT_SNACK_BAR_DATA,
-  MAT_SNACK_BAR_DEFAULT_OPTIONS_FACTORY
+  MAT_SNACK_BAR_DATA
 } from '@angular/material/snack-bar';
 
 @Component({

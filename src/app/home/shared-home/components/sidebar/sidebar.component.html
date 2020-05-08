@@ -1,1 +1,15 @@
-<p>sidebar works!</p>
+<div class="sidebar">
+  <div class="logo"></div>
+  <ul>
+    <li [ngClass]="{ active: router.url.includes('dashboard') }">
+      <div class="icon-container">
+        <div class="icon-home" (click)="redirectToDashborad()"></div>
+      </div>
+    </li>
+    <li>
+      <div class="icon-container">
+        <div class="icon-settings"></div>
+      </div>
+    </li>
+  </ul>
+</div>

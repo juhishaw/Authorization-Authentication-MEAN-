@@ -1,0 +1,43 @@
+@import "src/styles/variables";
+@import "src/styles/typography";
+@import "src/styles/mixins";
+
+.profile-widget {
+  @include d-flex {
+    justify-content: getJustify(fs);
+    align-items: getAlign(c);
+  }
+  margin-right: 20%;
+  .notification {
+    cursor: pointer;
+    @include margin(5px, 40px, 0, 0);
+    .icon-notification-bell {
+      @include font-size(24);
+    }
+  }
+  .avatar {
+    .dropdown-selector {
+      @include d-flex {
+        justify-content: getJustify(fs);
+        align-items: getAlign(c);
+      }
+      .profile {
+        background: url("src/assets/images/no-img-user.svg")
+          no-repeat;
+        height: 40px;
+        width: 40px;
+        background-size: cover;
+        @include margin(0, 10px, 0, 0);
+        @include d-flex {
+          justify-content: getJustify(fe);
+          align-items: getAlign(c);
+        }
+      }
+
+      .icon-caret {
+        @include font-size(8);
+        color: $white;
+      }
+    }
+  }
+}

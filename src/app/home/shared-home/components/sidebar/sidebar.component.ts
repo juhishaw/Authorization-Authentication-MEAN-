@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RouteConstants } from 'src/app/core/constants/route.constants';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
 
+  redirectToDashborad() {
+    this.router.navigate([RouteConstants.DASHBOARD]);
+  }
 }

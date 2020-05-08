@@ -1,4 +1,3 @@
-/*Use variables*/
 @import "./variables";
 @import "./typography";
 
@@ -62,4 +61,20 @@
   &.error {
     color: $error;
   }
+}
+
+.mat-badge-warn .mat-badge-content {
+  @include font-mixin(14px, $white, 600, 19px);
+  @include letter-spacing(0);
+  background: $error;
+}
+.mat-badge-content {
+  border-radius: 2px;
+}
+.mat-badge-medium .mat-badge-content {
+  height: 20px;
+  width: 24px;
+}
+.mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
+  right: -16px;
 }

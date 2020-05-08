@@ -1,7 +1,12 @@
+@import "src/styles/variables";
+@import "src/styles/typography";
+@import "src/styles/mixins";
+
 .alert {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include d-flex {
+    justify-content: getJustify(sb);
+    align-items: getAlign(c);
+  }
   .cross {
     cursor: pointer;
   }

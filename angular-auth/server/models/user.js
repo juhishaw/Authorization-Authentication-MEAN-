@@ -13,6 +13,16 @@ const schema = new mongoose.Schema({
     required: true,
   },
 
+  username: {
+    type: String,
+    required: true,
+  },
+
+  privilege: {
+    type: String,
+    required: true,
+  },
+
   /* For expiring JWTs */
   sessions: {
     type: Array,

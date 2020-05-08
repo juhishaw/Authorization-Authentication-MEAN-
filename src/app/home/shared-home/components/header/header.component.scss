@@ -1,0 +1,21 @@
+@import "src/styles/variables";
+@import "src/styles/typography";
+@import "src/styles/mixins";
+
+.header {
+  background-color: $dard-II;
+  max-height: 80px;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  @include d-flex {
+    justify-content: getJustify(sb);
+    align-items: getAlign(c);
+  }
+  .left {
+    width: 85%;
+  }
+  .right {
+    width: 15%;
+  }
+}

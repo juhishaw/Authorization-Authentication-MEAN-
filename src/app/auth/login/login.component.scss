@@ -8,9 +8,10 @@
       }
     }
     .buttons {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      @include d-flex {
+        justify-content: getJustify(sb);
+        align-items: getAlign(c);
+      }
       margin-top: 20px;
       .labels {
         cursor: pointer;
