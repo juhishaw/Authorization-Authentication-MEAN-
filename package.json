@@ -24,7 +24,7 @@
     "@angular/router": "~9.1.0",
     "@hapi/joi": "^17.1.1",
     "@saithodev/ts-appversion": "^2.1.1",
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.0",
     "bootstrap": "^4.4.1",
     "jquery": "^3.5.1",
     "moment": "^2.24.0",
